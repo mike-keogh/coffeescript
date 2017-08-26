@@ -1,14 +1,10 @@
+R = require('ramda')
 
-var result = [];
-var source = [1,2,3,4,5];
+result = []
+source = [1, 2, 3, 4, 5]
 
-var addTwo = function () {
-  var size = source.length;
-  for (var i = 0; i < size; i++){
-    result[i] = source[i] + 2
-  }
-}
+addTwo = (x) -> x + 2
 
-addTwo()
-
+result = R.map(addTwo, source)
 console.log(result)
+console.log(source)
